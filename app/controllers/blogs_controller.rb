@@ -3,8 +3,8 @@ class BlogsController < ApplicationController
 
   # GET /blogs
   # GET /blogs.json
-  def index
-    @projects = Project.search(params[:search])
+  def search
+    @blogs = Blog.search(params[:q])
   end
   def index
     @blogs = Blog.all
@@ -72,6 +72,6 @@ class BlogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:subject, :body, :published, :draft)
+    params.require(:blog).permit(:subject, :body, :published, :draft, )
   end
 end

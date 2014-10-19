@@ -6,6 +6,8 @@ def self.search(search)
   else
     find(:all)
   end
+  # sort: display
+
 end
 
 end # end of class blog

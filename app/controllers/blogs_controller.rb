@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def search
     @blogs = Blog.search(params[:q])
-    render 'index'
+    render :index
   end
   def index
     @blogs = Blog.all
